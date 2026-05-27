@@ -1,0 +1,14 @@
+name: Depos etp prepration
+
+on:
+  push:
+    branches: ['main']
+  pull_request:
+    types: [opened , synchronize]
+
+jobs:
+  dhruva:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print trigger info
+        run: echo "Triggered by ${{ github.event_name }}"
